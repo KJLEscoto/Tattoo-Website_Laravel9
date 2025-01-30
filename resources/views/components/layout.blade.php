@@ -10,6 +10,13 @@
 
     {{-- tailwind and js --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     {{-- fonts (Megrim | Dosis) --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,23 +27,32 @@
 </head>
 
 <body>
-    <main class="w-full h-full">
+    <main class="w-full h-full transition-all duration-150 ease-in">
 
         {{-- navbar --}}
-        <nav id="navbar" class="fixed top-0 w-full px-10 xl:px-52 py-5 z-50 ">
-            <ul class="flex items-center justify-between *:cursor-pointer text-white font-dosis text-lg">
+        <nav id="navbar" class="fixed top-0 w-full px-10 lg:px-32 xl:px-52 py-5 z-50">
+            <ul class="hidden md:flex items-center justify-between">
                 <div class="flex gap-14">
-                    <li>Home</li>
-                    <li>Artists</li>
-                    <li>Gallery</li>
+                    <x-navbar-menu item="Home" route="/" />
+                    <x-navbar-menu item="Artists" route="#" />
+                    <x-navbar-menu item="Gallery" route="#" />
                 </div>
-                <li>
-                    <img class="w-auto h-28" draggable="false" src="/img/logo-header.png" alt="Logo">
-                </li>
+                <span class="-ml-24 w-fit">
+                    <x-logo class="h-20 w-20" />
+                </span>
                 <div class="flex gap-14">
-                    <li>Services</li>
-                    <li>Clinic</li>
+                    <x-navbar-menu item="Services" route="#" />
+                    <x-navbar-menu item="Clinic" route="#" />
                 </div>
+            </ul>
+
+            <ul class="flex md:hidden items-center justify-between">
+                <x-logo class="h-14 w-14" />
+                <span class="h-8 w-8 text-white hover:opacity-75 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M3 4h18v2H3zm6 7h12v2H9zm-6 7h18v2H3z" />
+                    </svg>
+                </span>
             </ul>
         </nav>
 
