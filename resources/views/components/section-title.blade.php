@@ -1,7 +1,7 @@
 @props(['title' => '', 'descr' => '', 'secondtitle' => false])
 
 <div class="text-center md:space-y-7 space-y-2">
-    <h1 class=" font-megrim md:text-6xl text-4xl ">
+    <h1 class=" font-megrim md:text-6xl text-4xl select-none">
         {{ $title }}
         @if ($secondtitle)
             <br>

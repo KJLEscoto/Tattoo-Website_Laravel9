@@ -12,7 +12,7 @@
         </div>
 
         <!-- Navigation Arrows -->
-        <div class="flex justify-between lg:px-52 md:px-32 px-20">
+        <div class="flex md:justify-between justify-evenly lg:px-52 md:px-32 px-5 mx-auto">
             <!-- Left arrow -->
             <button id="prevBtn">
                 <svg class="w-12 h-auto cursor-pointer hover:text-custom-green text-gray-700"
@@ -54,7 +54,7 @@
             centeredSlides: true,
             loop: true,
             autoplay: {
-                delay: 2500, // Adjust speed here (2000ms = 2 seconds)
+                delay: 1500, // Adjust speed here (2000ms = 2 seconds)
                 disableOnInteraction: false
             },
             navigation: {

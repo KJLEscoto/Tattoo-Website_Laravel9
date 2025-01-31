@@ -4,7 +4,8 @@
         <section class="h-screen w-full bg-center bg-no-repeat bg-cover"
             style="background-image: url('/img/banner.jpg');">
             <div class="flex flex-col items-center justify-center h-screen px-10 lg:px-0">
-                <h1 class="lg:text-8xl md:text-6xl text-5xl font-megrim text-white text-center">We Turn Skin Into Art;
+                <h1 class="lg:text-8xl md:text-6xl text-5xl font-megrim text-white text-center select-none">We Turn Skin
+                    Into Art;
                 </h1>
                 <span class="absolute bottom-5 w-full">
                     <x-button label="BOOK NOW" />
@@ -29,16 +30,14 @@
                         <div class="w-full h-full relative group overflow-hidden">
                             <!-- Default (Black & White) -->
                             <img class="h-full w-full transition-opacity duration-500 grayscale group-hover:grayscale-0"
-                                src="{{ '/img/artist-bnw/' . $i . '.png' }}"
+                                src="{{ '/img/artist-bnw/' . $i . '.png' }}" draggable="false"
                                 onmouseover="this.src='/img/artist-colored/{{ $i }}.png'"
                                 onmouseout="this.src='/img/artist-bnw/{{ $i }}.png'"
                                 alt="{{ 'artist-' . $i }}" id="artist-{{ $i }}">
 
                             <!-- Rotated Hover Text (Properly Positioned) -->
                             <div
-                                class="absolute left-10 bottom-0 cursor-default w-full min-w-max translate-x-full group-hover:translate-x-0 h-fit flex items-center justify-center 
-                            bg-custom-green/80 shadow-lg text-white text-xl opacity-0 group-hover:opacity-100 
-                            transition-all duration-300 origin-left -rotate-90">
+                                class="absolute left-10 bottom-0 cursor-default w-full min-w-max translate-x-full group-hover:translate-x-0 h-fit flex items-center justify-center select-none bg-custom-green/80 shadow-lg text-white text-xl opacity-0 group-hover:opacity-100 transition-all duration-300 origin-left -rotate-90">
                                 <div class="text-center">
                                     <h1 class="font-megrim md:text-2xl text-lg">Solana Mercure</h1>
                                     <p class="font-dosis font-normal md:text-base text-sm">Tattoo Artist</p>
@@ -95,7 +94,7 @@
                     <section
                         class="mx-auto flex flex-col gap-5 justify-start items-center md:col-span-1 col-span-2 md:order-2 order-1">
                         <x-logo class="w-40 h-40" />
-                        <h1 class=" font-megrim lg:text-6xl md:text-5xl text-4xl">InkGie</h1>
+                        <h1 class=" font-megrim lg:text-6xl md:text-5xl text-4xl select-none">InkGie</h1>
                         <p class="text-lg font-dosis -mt-4">Tattoo & Aesthetics</p>
                     </section>
 
